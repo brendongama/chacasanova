@@ -1,0 +1,20 @@
+.imagens {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+
+img { 
+    margin:2%; 
+    width: 50%; 
+}
+
+.card-imagens {
+    display:flex;
+    align-items: center;
+}
+
+.titulo-card {
+    margin-top: 8px; 
+}
