@@ -14,4 +14,9 @@ export class ItensService {
   obterTodos(): Observable<IItens[]> {
     return this.httpClient.get<IItens[]>(`${API_PATH}itens`);
   }
+
+  findById(id : any):Observable<IItens>{
+    const url = `${API_PATH}itens/${id}`;
+    return this.httpClient.get<IItens>(url);
+  }
 }

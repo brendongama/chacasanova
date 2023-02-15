@@ -7,7 +7,7 @@ import { ItensComponent } from './itens/itens.component';
 
 const routes: Routes = [
   { path: '', component: ItensComponent },
-  { path: 'formulario', component: FormularioComponent },
+  { path: 'formulario/:id', component: FormularioComponent },
 ];
 
 @NgModule({
