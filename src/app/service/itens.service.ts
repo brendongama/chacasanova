@@ -19,4 +19,10 @@ export class ItensService {
     const url = `${API_PATH}itens/${id}`;
     return this.httpClient.get<IItens>(url);
   }
+
+  update(item: IItens):Observable<IItens> {
+    const url = `${API_PATH}itens/${item.id}`;
+    return this.httpClient.put<IItens>(url, item);
+  }
+
 }

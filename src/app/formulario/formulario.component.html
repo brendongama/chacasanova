@@ -1,6 +1,6 @@
 <app-home></app-home>
 
-<h1>Atualizando Bolo</h1>
+<h1>Selecionando um presente</h1>
 
         <mat-card class="card-imagens">
             <span class="titulo-card">{{item.nome}}</span>
@@ -8,20 +8,14 @@
                 <img src={{item.imagem}} alt="Minha Figura">
             </mat-card-content>            
         </mat-card>
- 
+  
     <form class="form mat-elevation-z8">
        
         <mat-form-field class="full-width">
             <mat-label>Nome</mat-label>
-            <input [(ngModel)]="item.nome" [formControl]="nome" required name="nome" maxlength="100" matInput placeholder="Ex. Linus Torvalds">   
+            <input [(ngModel)]="pessoa.nome" [formControl]="pessoaNome" required name="pessoaNome" maxlength="100" matInput placeholder="Ex. Linus Torvalds"> 
 
-            <mat-label>Nome</mat-label>
-            <input [(ngModel)]="item.nome" [formControl]="nome" required name="nome" maxlength="100" matInput placeholder="Ex. Linus Torvalds">  
-
-            <mat-label>Nome</mat-label>
-            <input [(ngModel)]="item.nome" [formControl]="nome" required name="nome" maxlength="100" matInput placeholder="Ex. Linus Torvalds">  
-
-            <button class="mat-elevation-z8" (click)="save()" mat-stroked-button color="accent">ATUALIZAR</button>
+            <button class="mat-elevation-z8" (click)="save()" mat-stroked-button color="accent">PRESENTEAR</button>
             <button class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
         </mat-form-field>   
        

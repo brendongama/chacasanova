@@ -3,4 +3,4 @@ export interface IItens {
     nome: string,
     ativo: boolean,
     imagem: string
-}
+} 
