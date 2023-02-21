@@ -1,25 +1,23 @@
 <app-home></app-home>
 
-<h1>Selecionando um presente</h1>
+<mat-card class="card-imagens">
+    <span class="titulo-card">{{item.nome | uppercase}}</span>
+    <mat-card-content class="imagens">
+        <img src={{item.imagem}} alt="Minha Figura">
+    </mat-card-content>  
+        
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Seu nome</mat-label>
+        <input [(ngModel)]="pessoa.nome" [formControl]="pessoaNome" required name="pessoaNome" maxlength="100" matInput placeholder="Digite seu Nome e Sobrenome"> 
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>       
+    </mat-form-field>       
 
-        <mat-card class="card-imagens">
-            <span class="titulo-card">{{item.nome}}</span>
-            <mat-card-content class="imagens">
-                <img src={{item.imagem}} alt="Minha Figura">
-            </mat-card-content>            
-        </mat-card>
+    <button class="mat-elevation-z8" (click)="save()" mat-stroked-button color="accent">PEGAR PRESENTE</button>
+    <button class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
+            
+</mat-card>
   
-    <form class="form mat-elevation-z8">
-       
-        <mat-form-field class="full-width">
-            <mat-label>Nome</mat-label>
-            <input [(ngModel)]="pessoa.nome" [formControl]="pessoaNome" required name="pessoaNome" maxlength="100" matInput placeholder="Ex. Linus Torvalds"> 
-
-            <button class="mat-elevation-z8" (click)="save()" mat-stroked-button color="accent">PRESENTEAR</button>
-            <button class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
-        </mat-form-field>   
-       
-    </form>   
+     
 
 
  

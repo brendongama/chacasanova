@@ -13,4 +13,12 @@ img {
     align-items: center;
 }
 
+.full-width {
+    width: 100%;
+    margin-bottom: 1rem;
+}
 
+button {
+    width: 100%;
+    margin-bottom: .5rem;
+}
