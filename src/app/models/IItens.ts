@@ -2,5 +2,6 @@ export interface IItens {
     id?: number,
     nome: string,
     ativo: boolean,
-    imagem: string
+    imagem: string,
+    link: string
 } 

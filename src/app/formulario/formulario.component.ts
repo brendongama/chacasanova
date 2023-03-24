@@ -20,7 +20,8 @@ export class FormularioComponent {
     id: 0,
     nome: '',
     ativo: false,
-    imagem: ''
+    imagem: '',
+    link : ''
   }
 
   pessoa: IPessoa = {
@@ -53,7 +54,7 @@ export class FormularioComponent {
     this.pessoa.item = this.item.nome;
     this.pessoaService.save(this.pessoa).subscribe((resposta) => {
       this.update();
-
+      window.open(this.item.link, '_blank');
       this.router.navigate([''])
         .then(() => {
       window.location.reload();
@@ -63,9 +64,10 @@ export class FormularioComponent {
   }
 
   update():void {
-      this.item.ativo = false;
-      this.itemService.update(this.item).subscribe((resposta) => {
+      //this.item.ativo = false;
+      this.itemService.update(this.item).subscribe((resposta) => {       
       })
+      
     }
 
   cancel(): void {
