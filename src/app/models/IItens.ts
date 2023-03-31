@@ -1,5 +1,7 @@
 export interface IItens {
     id?: number,
     nome: string,
-    ativo: boolean
-}
+    ativo: boolean,
+    imagem: string,
+    link: string
+} 

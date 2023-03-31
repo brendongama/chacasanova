@@ -1,15 +1,18 @@
 <app-home></app-home>
+<div class="titulo">
+    <h1>Escolha um presente abaixo</h1>
+</div>
+
 <mat-grid-list cols="2" rowHeight="2:1" class="container">   
+    
     <mat-grid-tile *ngFor="let item of itens">  
         <mat-card class="card-imagens">
-            <span class="titulo-card">{{item.nome}}</span>
-            <mat-card-content class="imagens" routerLink="formulario">
-                <img src="../../../assets/img/panelas.jpg" alt="Minha Figura">
+            <h1><span class="titulo-card">{{item.nome | uppercase}}</span></h1>
+            <mat-card-content class="imagens" routerLink="formulario/{{item.id}}">
+                <img src={{item.imagem}} alt="Minha Figura">
             </mat-card-content>
         </mat-card>
-    </mat-grid-tile> 
-    
-    
+    </mat-grid-tile>     
 </mat-grid-list>
 
 <router-outlet></router-outlet>
