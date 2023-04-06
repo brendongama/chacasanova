@@ -30,6 +30,8 @@ export class FormularioComponent {
     item: '',
   }
 
+
+
   nome = new FormControl('');
   pessoaNome = new FormControl('');
 
@@ -53,14 +55,11 @@ export class FormularioComponent {
   save(): void {
     this.update();
     this.pessoa.item = this.item.nome;
-    this.pessoaService.save(this.pessoa).subscribe((resposta) => {
-      
-      window.open(this.item.link, '_blank');
-      this.router.navigate([''])
-        .then(() => {
-      window.location.reload();
-  });
-    })
+    window.open(this.item.link, '_blank');
+    this.router.navigate([''])
+      .then(() => {
+        window.location.reload();
+      });
      
   }
 
