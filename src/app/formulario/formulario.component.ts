@@ -53,17 +53,20 @@ export class FormularioComponent {
   }
 
   save(): void {
-    this.item.ativo = false; 
+    
+    this.pessoaService.save(this.pessoa).subscribe((resposta) => {
+    }) 
+
+      this.item.ativo = false; 
       this.itemService.update(this.item).subscribe((resposta) => {  
         this.pessoa.item = this.item.nome;
         window.open(this.item.link, '_blank');
         this.router.navigate([''])
           .then(() => {
             window.location.reload();
-          });
-          this.pessoaService.save(this.pessoa).subscribe((resposta) => {
-          })
-      })    
+          });          
+      })      
+      
       
      
   }
