@@ -20,7 +20,6 @@ export class ItensComponent {
   listarTodos() {
     this.itenService.obterTodos().subscribe(resposta => {
       this.itens = resposta;
-      console.log(resposta);
     }
   )}
 
