@@ -51,13 +51,14 @@ export class FormularioComponent {
   }
 
   save(): void {
+    this.update();
     this.pessoa.item = this.item.nome;
     this.pessoaService.save(this.pessoa).subscribe((resposta) => {
-      this.update();      
+      
+      window.open(this.item.link, '_blank');
       this.router.navigate([''])
         .then(() => {
       window.location.reload();
-      window.open(this.item.link, '_blank');
   });
     })
      
