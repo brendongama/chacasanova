@@ -53,7 +53,7 @@ export class FormularioComponent {
   }
 
   save(): void {
-    
+    this.pessoa.item = this.item.nome;
     this.pessoaService.save(this.pessoa).subscribe((resposta) => {
     }) 
 
