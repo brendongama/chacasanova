@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+.grid-card {
+    display: flex;
+    align-items: center;
+}
+
 img {   
     width: 60%; 
 }

@@ -64,7 +64,7 @@ export class FormularioComponent {
   }
 
   update():void {
-      //this.item.ativo = false;
+      this.item.ativo = false; 
       this.itemService.update(this.item).subscribe((resposta) => {       
       })
       
