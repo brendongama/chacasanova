@@ -11,6 +11,8 @@ export class ItensComponent {
 
   itens: IItens[] = [];
 
+  loading: boolean = false;
+
   constructor(private itenService: ItensService) {}
 
   ngOnInit(): void { 
@@ -20,6 +22,7 @@ export class ItensComponent {
   listarTodos() {
     this.itenService.obterTodos().subscribe(resposta => {
       this.itens = resposta;
+      this.loading = true; 
     }
   )}
 

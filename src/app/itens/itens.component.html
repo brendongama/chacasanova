@@ -1,9 +1,15 @@
 <app-home></app-home>
-<div class="titulo">
-    <h1>Escolha um presente abaixo !</h1>
+<div class="titulo" *ngIf="!loading">
+    <h1>Estamos carregando a lista de presentes... Aguarde um momento !!</h1>
+</div>
+<div class="titulo" *ngIf="!loading"> 
+    <mat-spinner>Teste</mat-spinner>
 </div>
 
-<mat-grid-list cols="1" rowHeight="2:1" class="container">   
+<div class="titulo" *ngIf="loading">
+    <h1>Escolha um presente abaixo !</h1>    
+</div>
+<mat-grid-list cols="1" rowHeight="2:1" class="container" *ngIf="loading">   
     
     <mat-grid-tile *ngFor="let item of itens" class="grid-card">  
         <mat-card class="card-imagens">
