@@ -61,17 +61,12 @@ export class FormularioComponent {
           .then(() => {
             window.location.reload();
           });
-      })
-    
+          this.pessoaService.save(this.pessoa).subscribe((resposta) => {
+          })
+      })    
+      
      
   }
-
-  update():void {
-      this.item.ativo = false; 
-      this.itemService.update(this.item).subscribe((resposta) => {       
-      })
-      
-    }
 
   cancel(): void {
     this.router.navigate(['']) 
