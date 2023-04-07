@@ -59,7 +59,6 @@ export class FormularioComponent {
 
       this.item.ativo = false; 
       this.itemService.update(this.item).subscribe((resposta) => {  
-        this.pessoa.item = this.item.nome;
         window.open(this.item.link, '_blank');
         this.router.navigate([''])
           .then(() => {
